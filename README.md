@@ -19,13 +19,44 @@ To write a program to perform linear search and binary search using python progr
 ## Program:
 i)	#Use a linear search method to match the item in a list.
 ```
+def linearsearch(array,n,k):
+    for i in range(0,n):
+        if (array[i]==k):
+            return i
+    return -1
+array = eval(input())
+k=int(input())
+n=len(array)
+array.sort()
+result=linearsearch(array,n,k)
+if (result==-1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",result)
 
 
 
 ```
 ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
-
+def linearsearch(array,n,k):
+    for i in range(0,n):
+        if (array[i]==k):
+            return i
+    return -1
+array=eval(input())
+k=int(input())
+n=len(array)
+array.sort()
+result=linearsearch(array,n,k)
+if (result==-1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",result)
 
 
 
@@ -33,13 +64,41 @@ ii)	# Find the element in a list using Binary Search(Iterative Method).
 ```
 iii)	# Find the element in a list using Binary Search (recursive Method).
 ```
-
+def binarysearchIter(array, k, low, high):
+    while low<=high:
+        mid=low+(high-low)//2
+        if array[mid]==k:
+            return mid
+        elif array[mid]<k:
+            low=mid+1
+        else:
+            high=mid-1
+    return -1
+array=eval(input())
+array.sort()
+k=eval(input())
+result=binarysearchIter(array, k, 0, len(array)-1)
+if (result == -1):
+    print(array)
+    print("Element not found")
+else:
+    print(array)
+    print("Element found at index: ",result)
 
 
 
 
 ```
 ## Sample Input and Output
+
+
+![image](https://github.com/Neethiventhan123/Search-Algorithm/assets/148514848/5f116528-1b59-4ccd-b579-de0fc8473c4c)
+
+![image](https://github.com/Neethiventhan123/Search-Algorithm/assets/148514848/f9374f12-c89f-426d-8c13-9daf5b05e434)
+
+![image](https://github.com/Neethiventhan123/Search-Algorithm/assets/148514848/ce20882d-d9b4-482d-aaf9-3dc8dbf52bae)
+
+
 
 
 
